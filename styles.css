@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    min-height: 7em;
+    background-color: lightblue;
+}
+
+nav, main, aside {
+    height: 15em
+}
+
+nav {
+    background-color: lightcoral;
+}
+
+main {
+    background-color: lightseagreen;
+}
+
+aside {
+    background-color: lightslategray;
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: 15rem 1fr;
+        height: 100vh;
+    }
+
+    header {
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+
+    nav, main, aside {
+        height: unset;
+    }
+}
